@@ -41,30 +41,6 @@ right1Flag = 0;
 right2Flag = 0;
 right3Flag = 0;
 
-global picShow 
-picShow = cell(9,2);
-[none, ~, alpha_pic_none]  = imread('./pic/none.png');
-[upper, ~, alpha_pic_upper] = imread('./pic/upper.png');
-[lower, ~, alpha_pic_lower] = imread('./pic/lower.png');
-[left1, ~, alpha_pic_left1] = imread('./pic/left1.png');
-[left2, ~, alpha_pic_left2] = imread('./pic/left2.png');
-[left3, ~, alpha_pic_left3] = imread('./pic/left3.png');
-[right1, ~, alpha_pic_right1] = imread('./pic/right1.png');
-[right2, ~, alpha_pic_right2] = imread('./pic/right2.png');
-[right3, ~, alpha_pic_right3] = imread('./pic/right3.png');
-picShow{1,1} = none; picShow{1,2} = alpha_pic_none;
-picShow{2,1} = upper; picShow{2,2} = alpha_pic_upper;
-picShow{3,1} = lower; picShow{3,2} = alpha_pic_lower;
-picShow{4,1} = left1; picShow{4,2} = alpha_pic_left1;
-picShow{5,1} = left2; picShow{5,2} = alpha_pic_left2;
-picShow{6,1} = left3; picShow{6,2} = alpha_pic_left3;
-picShow{7,1} = right1; picShow{7,2} = alpha_pic_right1;
-picShow{8,1} = right2; picShow{8,2} = alpha_pic_right2;
-picShow{9,1} = right3; picShow{9,2} = alpha_pic_right3;
-ShowStrikePosition(none, alpha_pic_none)
-clear none upper lower left1 left2 left3 right1 right2 right3
-clear alpha_pic_none alpha_pic_upper alpha_pic_lower alpha_pic_left1 alpha_pic_left2 alpha_pic_left3 alpha_pic_right1 alpha_pic_right2 alpha_pic_right3
-
 com = ['COM', num2str(com_num)];
 try
     s = serial(com);
